@@ -1,0 +1,127 @@
+.travel-box {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: $color-write;
+
+  &__item {
+    padding: 3.125rem 2.75rem 2.19rem;
+  }
+
+  &__text {
+    margin: 1.5rem 0 4.375rem;
+    color: $color-section-text;
+  }
+
+}
+
+.text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+.date {
+  font-size: 3.5rem;
+  color: $color-section-text;
+  font-weight: 100;
+  text-align: center;
+}
+
+.manth {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 1400px) {
+  .travel__list {
+    display: flex;
+    position: relative;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    &:last-child {
+      flex-direction: column;
+    }
+
+    &:last-child>.trevel-box__item>div {
+      flex-basis: 85%;
+    }
+
+    &:last-child>.trevel-box__item>p {
+      flex-basis: 10%;
+    }
+
+    &:nth-child(even)>.trevel-box__item {
+      flex-direction: row-reverse;
+      text-align: right;
+      padding-left: 1.5rem;
+      padding-right: 3rem;
+    }
+  }
+
+  .body__img {
+    flex-basis: 50%;
+    height: 27.375rem;
+  }
+
+  .travel-box__item {
+    padding: 1.125rem 0.75rem 3rem 2.75rem;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .travel-box__item>div {
+    flex-basis: 70%;
+  }
+
+  .travel-box__item>p {
+    flex-basis: 20%;
+  }
+
+  .travel-box__text {
+    margin: 1.5rem 0 0;
+  }
+
+  .background {
+    height: auto;
+    width: 100%;
+  }
+
+  .post-1:hover .background {
+    background: $color-logo;
+    filter: opacity(0.6);
+  }
+
+  .post-2:hover .background {
+    background: $color-post2;
+    filter: opacity(0.6);
+  }
+
+  .post-3:hover .background {
+    background: $color-post3;
+    filter: opacity(0.8);
+  }
+
+  .post-4:hover .background {
+    background: $color-post4;
+    filter: opacity(0.6);
+  }
+
+  .post-5:hover .background {
+    background: $color-post5;
+    filter: opacity(0.6);
+  }
+
+  .travel__img {
+    height: 100%;
+  }
+}

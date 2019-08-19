@@ -1,0 +1,30 @@
+.travel-aside {
+    margin-bottom: 1.563rem;
+    color: $color-background-body;
+    background-color: $color-write;
+
+    &:last-child {
+        margin-bottom: 3.125rem;
+    }
+
+    &__item {
+        padding: 2.75rem 2.63rem 3rem;
+    }
+
+    &__text {
+        color: $color-aside-text;
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+        font-weight: 300;
+        color: $color-background-body;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .trevel-aside__item {
+        padding: 2.75rem 2.625rem 3rem;
+    }
+}

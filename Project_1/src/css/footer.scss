@@ -1,0 +1,15 @@
+.footer {
+    color: $color-background-header;
+    padding: 2.5rem 3.75rem 2.125rem;
+    line-height: 1.5;
+    background-color: $color-background;
+    text-align: center;
+}
+
+@media screen and (min-width: 1400px) {
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
