@@ -1,0 +1,51 @@
+header {
+    @include flex('');
+
+    .header-wrap {
+        width: px-to-rem(780px);
+        padding-top: px-to-rem(25px);
+        padding-bottom: px-to-rem(216px);
+
+        .landing-logo {
+            @include flex('');
+
+            img {
+                @extend %logo;
+                margin-right: px-to-rem(20px);
+            }
+
+            p {
+                @extend %logoPosition;
+                font-weight: map-get($font-weight, bold);
+                font-size: px-to-rem(30px);
+
+                span {
+                    font-weight: map-get($font-weight, light);
+                    font-size: px-to-rem(14px);
+                }
+            }
+        }
+
+        .header_heading {
+            font-size: px-to-rem(90px);
+            padding-top: px-to-rem(106px);
+            font-weight: map-get($font-weight, bold);
+
+            &::after {
+                @include underline(block, absolute, '', -1);
+                width: px-to-rem(380px);
+                height: px-to-rem(27px);
+                bottom: px-to-rem(20px);
+            }
+        }
+
+        .header_text {
+            padding: px-to-rem(80px) 0;
+            width: px-to-rem(700px);
+        }
+
+        .header_button {
+            @extend %btn;
+        }
+    }
+}

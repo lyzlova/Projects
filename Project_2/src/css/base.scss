@@ -1,0 +1,53 @@
+
+html {
+    box-sizing: border-box;
+  }
+
+  p, span, div, img {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: $contentBackground;
+    font-family: 'Source Sans Pro', sans-serif;
+    min-height: 100vh;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  header, main, footer {
+    margin: 0 auto;
+    min-width: px-to-rem(960px); 
+  }
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+    

@@ -1,0 +1,18 @@
+footer {
+    .footer-wrap {
+      width: px-to-rem(1540px);
+      padding-top: px-to-rem(25px);
+      @include flex ('all');
+      height: px-to-rem(300px);
+      @include flex ('aic');
+      padding: px-to-rem(170px) px-to-rem(190px) px-to-rem(74px);
+      div {
+        img {
+          @extend %logo;
+        }
+        p {
+          @extend %logoPosition;
+        }
+      }
+    }
+  }

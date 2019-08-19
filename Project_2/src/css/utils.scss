@@ -1,0 +1,64 @@
+@mixin flex($type: '') {
+  display: flex;
+
+  @if $type=='jcc' {
+    justify-content: center;
+  }
+
+  @else if $type=='aic' {
+    align-items: center;
+  }
+
+  @else if $type=='jcsb' {
+    justify-content: space-between;
+  }
+
+  @else if $type=='all' {
+    justify-content: space-between;
+    margin: auto;
+  }
+
+  @else if $type=='fw' {
+    flex-wrap: wrap;
+  }
+}
+
+@mixin underline($display, $pos, $conten, $index) {
+  display: $display;
+  position: $pos;
+  content: $conten;
+  z-index: $index;
+}
+
+@function px-to-rem($val) {
+  $remSize: $val/$baseFontSize;
+  @return #{$remSize}rem;
+}
+
+
+%logo {
+  width: px-to-rem(56px);
+  height: px-to-rem(56px);
+}
+
+%logoPosition {
+  @include flex ('aic');
+  @include flex ('jcc');
+  flex-direction: column;
+}
+
+$font-weight: (light: $fontWeightLightItalic,
+  regular: $fontWeightRegular,
+  bold: $fontWeightBold);
+
+%btn {
+  display: inline-block;
+  padding: px-to-rem(20px) px-to-rem(52px) px-to-rem(20px) px-to-rem(52px);
+  border-radius: px-to-rem(2px);
+  height: px-to-rem(60px);
+  width: px-to-rem(176px);
+  font-weight: map-get($font-weight, regular);
+  font-size: px-to-rem(20px);
+  border-radius: px-to-rem(4px);
+  text-align: center;
+}
