@@ -94,7 +94,7 @@
       right: 0;
       background-color: $colorUnderline;
       @include underline(inline, absolute, '', -1);
-      width: px-to-rem(236px);
+      width: px-to-rem(258px);
       height: px-to-rem(16px);
       bottom: px-to-rem(50px);
     }
@@ -126,20 +126,23 @@
   .banner {
      border-radius: px-to-rem(10px);
     padding: px-to-rem(20px) px-to-rem(50px);
+    align-self: center;
     position: absolute;
-    top: 92%;
-    transform: translate(9%, 33%);
+    left: 13%;
+    width: 74%; 
+    top: 95.5%;
   }
 
   .section_banner {
     width: 100%;
     @include flex ('');
     justify-content: space-between;
+
+
     &_heading {
       font-size: px-to-rem(26px);
       position: relative;
       display: inline-block;
-      margin-right: px-to-rem(70px);
       z-index: 1;
 
       &::after {
@@ -169,18 +172,14 @@
   }
 }
 
-
 @media screen and (min-width: 1024px) {
   .banner {
-    transform: translate(10%, 2%);
+    display: flex;
+    top: 93%;
   }
 
   .section_card {
     flex-basis: 32%;
-  }
-
-  .section_banner_heading{
-    margin-right: px-to-rem(260px);
   }
 
   .section_banner {
@@ -193,8 +192,3 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
-  .banner {
-    transform: translate(59%, 2%);
-  }
-}
