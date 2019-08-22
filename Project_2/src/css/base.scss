@@ -21,6 +21,8 @@ html {
     background: $contentBackground;
     font-family: 'Source Sans Pro', sans-serif;
     min-height: 100vh;
+    background: url('../../build/img/m-h-day.jpg') no-repeat center top fixed ;
+    background-size: cover;
   }
   
   img {
@@ -31,7 +33,7 @@ html {
 
   header, main, footer {
     margin: 0 auto;
-    min-width: px-to-rem(960px); 
+    min-width: px-to-rem(320px);
   }
 
   

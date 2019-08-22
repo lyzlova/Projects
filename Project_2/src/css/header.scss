@@ -1,51 +1,119 @@
-header {
-    @include flex('');
+.header-wrap {
+    padding: px-to-rem(20px);
+    color: $colorText;
+}
 
-    .header-wrap {
-        width: px-to-rem(780px);
-        padding-top: px-to-rem(25px);
-        padding-bottom: px-to-rem(216px);
+    .landing-logo {
+        @include flex('');
+        justify-content: center;
 
-        .landing-logo {
-            @include flex('');
-
-            img {
-                @extend %logo;
-                margin-right: px-to-rem(20px);
-            }
-
-            p {
-                @extend %logoPosition;
-                font-weight: map-get($font-weight, bold);
-                font-size: px-to-rem(30px);
-
-                span {
-                    font-weight: map-get($font-weight, light);
-                    font-size: px-to-rem(14px);
-                }
-            }
+        img {
+            @extend %logo;
+            margin-right: px-to-rem(20px);
         }
 
-        .header_heading {
-            font-size: px-to-rem(90px);
-            padding-top: px-to-rem(106px);
+        p {
+            @extend %logoPosition;
             font-weight: map-get($font-weight, bold);
+            font-size: px-to-rem(30px);
 
-            &::after {
-                @include underline(block, absolute, '', -1);
-                width: px-to-rem(380px);
-                height: px-to-rem(27px);
-                bottom: px-to-rem(20px);
+            span {
+                font-weight: map-get($font-weight, light);
+                font-size: px-to-rem(14px);
             }
-        }
-
-        .header_text {
-            padding: px-to-rem(80px) 0;
-            width: px-to-rem(700px);
-        }
-
-        .header_button {
-            @extend %btn;
         }
     }
+
+    .header_heading {
+        font-size: px-to-rem(30px);
+        max-width: px-to-rem(300px);
+        padding: px-to-rem(30px) 0;
+        font-weight: map-get($font-weight, bold);
+    }
+
+    .header_text {
+        margin-bottom: px-to-rem(30px);
+        white-space: pre-line;
+        max-width: px-to-rem(320px);
+    }
+
+    .header_button {
+        @extend %btn;
+        padding: px-to-rem(6px) px-to-rem(12px);
+        font-size: px-to-rem(13px);
+        color: $colorBtn;
+        background-color: $colorBtnBunnerLeft;
+        border: 1px solid $colorBtnBunnerLeft;
+    }
+
+@media screen and (min-width: 768px) {
+    .header-wrap {
+        padding: px-to-rem(25px) px-to-rem(100px) px-to-rem(120px);
+    }
+
+    .landing-logo {
+        @include flex('');
+        justify-content: flex-start;
+    }
+
+    .header_heading {
+        max-width: px-to-rem(400px);
+        font-size: px-to-rem(50px);
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            @include underline(block, absolute, '', -1);
+            width: px-to-rem(210px);
+            height: px-to-rem(27px);
+            bottom: px-to-rem(36px);
+            background-color: $colorUnderline;
+        }
+    }
+
+    .header_text {
+        padding: px-to-rem(40px) 0;
+        max-width: px-to-rem(700px);
+        font-size: px-to-rem(20px);
+    }
+
+    .header_button {
+        font-size: px-to-rem(20px);
+        padding: px-to-rem(16px) px-to-rem(40px);
+    }
+
 }
+
+@media screen and (min-width: 1024px) {
+    .landing-logo {
+        p{
+            font-size: px-to-rem(40px);
+          span {
+            font-size: px-to-rem(20px);
+        }  
+        }
+        
+    }
+    .header-wrap {
+        padding: px-to-rem(40px) px-to-rem(150px) px-to-rem(216px);
+    }
+
+    .header_heading {
+        max-width: px-to-rem(900px);
+        font-size: px-to-rem(100px);
+        padding-top: px-to-rem(106px);
+        line-height: 1;
+        
+        &::after {
+            width: px-to-rem(420px);
+        }
+    }
+
+    .header_text {
+        padding: px-to-rem(80px) 0;
+        width: px-to-rem(700px);
+        font-size: px-to-rem(26px);
+    }
+}
+
+

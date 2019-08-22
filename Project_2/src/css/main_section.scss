@@ -1,75 +1,200 @@
 .section {
-    padding: px-to-rem(60px) px-to-rem(190px) px-to-rem(190px) px-to-rem(260px); 
-    .section_text {  
-        padding-bottom: px-to-rem(56px);  
-        font-weight: map-get($font-weight, regular); 
-        font-size: px-to-rem(52px);
-        transform: translate(50% 50%);
-        &::after {
-          @include underline(inline, absolute, '', -1);
-          width: px-to-rem(236px); 
-          height: px-to-rem(16px);  
-          bottom: px-to-rem(66px);
-      }
-    }
-  
-    .section_card_wrap {
-        width: px-to-rem(1536px); 
-        @include flex ('all');
-  
-        .section_card {
-            border-radius: px-to-rem(6px); 
-            padding: px-to-rem(25px) px-to-rem(25px)  px-to-rem(25px) px-to-rem(30px); 
-            .section_card_img{
-                height: px-to-rem(300px);
-                border-radius: px-to-rem(4px); 
-            }
-            .section_card_heading{
-              padding: px-to-rem(25px) 0 px-to-rem(25px) 0;
-              font-weight: map-get($font-weight, regular); 
-              font-size: px-to-rem(30px);
-              &::after{
-                @include underline(inline, absolute, '', -1);
-                height: px-to-rem(16px);    
-                bottom: px-to-rem(30px);
-              }
-            }
-            p{
-              font-weight: map-get($font-weight, regular); 
-              font-size: px-to-rem(20px);
-                          }
-        }
-      }
-  
-    .section_banner {
-      border-radius: px-to-rem(10px);
-        height: px-to-rem(178px);  
-        width: px-to-rem(1200px); 
-        @include flex ('all');
-        padding: px-to-rem(40px) px-to-rem(126px) px-to-rem(50px) px-to-rem(128px); 
-        .section_banner_text_wrap{
-            .section_banner_heading{
-              padding-bottom: px-to-rem(25px);  
-              font-weight: map-get($font-weight, regular); 
-              font-size: px-to-rem(40px); 
-              &::after{
-                @include underline(block, absolute, '', -1);
-                left: px-to-rem(158px); 
-                width: px-to-rem(82px); 
-                height: px-to-rem(16px);    
-                bottom: px-to-rem(30px);
-              } 
-            }
-  
-            .section_banner_text{
-              font-weight: map-get($font-weight, regular); 
-              font-size: px-to-rem(20px);
-              text-align: start;
-            }
-            
-        }
-        .section_banner_button{
-          @extend %btn;
-        }
+  position: relative;
+  padding: px-to-rem(20px);
+  text-align: center;
+
+  &_text {
+    padding-bottom: px-to-rem(20px);
+    font-weight: map-get($font-weight, regular);
+    font-size: px-to-rem(30px);
+  }
+}
+
+.section_card_wrap {
+  min-width: px-to-rem(280px);
+}
+
+.section_card {
+  border-radius: px-to-rem(6px);
+  margin-bottom: px-to-rem(20px);
+  background-color: $bcgFooter;
+  padding: px-to-rem(25px);
+
+  &_img {
+    border-radius: px-to-rem(4px);
+    width: 100%;
+  }
+
+  .section_card_heading {
+    color: $contentBackground;
+    padding: px-to-rem(25px) 0;
+    font-weight: map-get($font-weight, regular);
+    font-size: px-to-rem(24px);
+
+    &::after {
+      @include underline(inline, absolute, '', -1);
+      height: px-to-rem(16px);
+      bottom: px-to-rem(30px);
     }
   }
+
+  p {
+    font-weight: map-get($font-weight, regular);
+    font-size: px-to-rem(14px);
+    line-height: 1.5;
+    color: $colorSubtitle;
+  }
+}
+
+.banner {
+  min-width: px-to-rem(280px);
+  padding: px-to-rem(20px);
+  background: linear-gradient(to right, $colorBtnBunnerLeft, $colorBunnerRight);
+}
+
+.section_banner_heading {
+  padding-bottom: px-to-rem(25px);
+  font-weight: map-get($font-weight, regular);
+  font-size: px-to-rem(24px);
+  color: $colorText;
+}
+
+.section_banner_text {
+  font-weight: map-get($font-weight, regular);
+  font-size: px-to-rem(14px);
+  margin-bottom: px-to-rem(10px);
+  color: $colorSubtitle;
+}
+
+.section_banner_button {
+  @extend %btn;
+  align-self: center;
+  color: $colorBtn;
+  background-color: $colorBtnBunnerLeft;
+  padding: px-to-rem(10px) px-to-rem(30px);
+  font-size: px-to-rem(13px);
+  border: 1px solid $colorBtnBunnerLeft;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: px-to-rem(20px) px-to-rem(20px) px-to-rem(180px);
+  }
+  .section_text {
+    padding-bottom: px-to-rem(40px);
+    font-size: px-to-rem(54px);
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    transform: translate(50% 50%);
+
+    &::after {
+      right: 0;
+      background-color: $colorUnderline;
+      @include underline(inline, absolute, '', -1);
+      width: px-to-rem(236px);
+      height: px-to-rem(16px);
+      bottom: px-to-rem(50px);
+    }
+  }
+
+  .section_card_wrap {
+    min-width: px-to-rem(728px);
+    @include flex ('jcsb');
+
+    .section_card_heading {
+      font-size: px-to-rem(34px);
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+
+      &::after {
+        @include underline(inline, absolute, '', -1);
+        left: 0;
+        width: 100%;
+        background-color: $colorUnderline;
+      }
+    }
+
+    p {
+      font-size: px-to-rem(22px);
+    }
+  }
+
+  .banner {
+     border-radius: px-to-rem(10px);
+    padding: px-to-rem(20px) px-to-rem(50px);
+    position: absolute;
+    top: 92%;
+    transform: translate(9%, 33%);
+  }
+
+  .section_banner {
+    width: 100%;
+    @include flex ('');
+    justify-content: space-between;
+    &_heading {
+      font-size: px-to-rem(26px);
+      position: relative;
+      display: inline-block;
+      margin-right: px-to-rem(70px);
+      z-index: 1;
+
+      &::after {
+        @include underline(block, absolute, '', -1);
+        left: px-to-rem(101px);
+        width: px-to-rem(54px);
+        height: px-to-rem(13px);
+        bottom: px-to-rem(28px);
+        background-color: $colorUnderline;
+      }
+    }
+
+    &_text {
+      font-size: px-to-rem(18px);
+      text-align: start;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section_card_wrap {
+    flex-wrap: wrap;
+  }
+
+  .section_card {
+    flex-basis: 48%;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .banner {
+    transform: translate(10%, 2%);
+  }
+
+  .section_card {
+    flex-basis: 32%;
+  }
+
+  .section_banner_heading{
+    margin-right: px-to-rem(260px);
+  }
+
+  .section_banner {
+    &_text {
+      font-size: px-to-rem(20px);
+    }
+    &_button{
+      font-size: px-to-rem(18px);
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .banner {
+    transform: translate(59%, 2%);
+  }
+}
