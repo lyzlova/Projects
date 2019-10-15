@@ -1,0 +1,135 @@
+.miracle-bcg {
+    background-color: #f1f9fb;
+}
+
+.miracle {
+    padding: 30px 20px 40px;
+}
+
+.miracle__title {
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.miracle__descr {
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 60px;
+    border-top: 6px solid #a8c53a;
+    border-radius: 10px;
+    padding: 64px 30px 35px;
+}
+
+.miracle-block-icon {
+    background-color: #f0f9fa;
+    height: 100px;
+    left: 50%;
+    width: 100px;
+    border-radius: 100%;
+    padding: 9px;
+    top: -1%;
+}
+
+.miracle__icon {
+    left: 50%;
+    top: 50%;
+}
+
+.miracle-footer {
+    position: relative;
+    padding: 30px;
+    border: 2px solid #f4d3bb;
+    border-radius: 10px;
+}
+
+.miracle-footer__text {
+    background-color: #f0f9fa;
+    height: 30px;
+    left: 50%;
+    width: 170px;
+    padding: 9px;
+    top: -1%;
+}
+
+.miracle-footer__text::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    z-index: -1;
+    left: 45%;
+    background-color: #f4d3bb;
+    height: 50px;
+    width: 10px;
+}
+
+.miracle-output {
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.color-red {
+    color: #fa4f01;
+  }
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .miracle {
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+    .miracle {
+        padding: 30px 20px 50px;
+    }
+
+    .miracle__item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 70px;
+    }
+
+    .miracle__descr:last-child {
+        margin: 0 auto;
+    }
+
+    .miracle__descr {
+        flex-basis: 48%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .miracle {
+        padding: 170px 20px 130px;
+    }
+
+    .miracle__item {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1160px;
+    }
+
+    .miracle__descr {
+        flex-basis: 31.5%;
+    }
+
+    .miracle__title {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .miracle__descr h4 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .miracle__descr span {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .miracle__descr p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+}

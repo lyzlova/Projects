@@ -1,0 +1,382 @@
+.header__bcg {
+    background: url('../png/Слой 12.png');
+    background-size: cover;
+}
+
+.header-container {
+    padding: 20px 20px 50px;
+    display: flex;
+}
+
+.header {
+    padding: 10px 34px 50px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.header-item {
+    margin-bottom: 30px;
+}
+
+.header-item:last-child {
+    margin-bottom: 0;
+}
+
+.header__text {
+    background-position: center;
+    height: 40px;
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.icon1 {
+    background-image: url('../svg/header/Forma1.svg');
+}
+
+.icon2 {
+    background-image: url('../svg/header/Forma2.svg');
+}
+
+.icon3 {
+    background-image: url('../svg/header/Forma3.svg');
+}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+.header-complex {
+    margin-bottom: 58px;
+}
+
+.header-complex__item {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 280px;
+    justify-content: space-between;
+}
+
+.header-complex__item:last-child {
+    margin-bottom: 0;
+}
+
+.header-complex-stap {
+    background-color: #a7c93d;
+    border: 8px solid #e8edc9;
+    max-height: 32px;
+    width: 32px;
+    padding: 20px;
+    position: relative;
+}
+
+.header-ellipse {
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.header-complex__text {
+    flex-basis: 74%;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.header__form {
+    width: 260px;
+    position: relative;
+    align-items: flex-start;
+    border-radius: 10px;
+    border: 6px solid #a8ca3f;
+    text-align: center;
+    background-color: #fff;
+}
+
+.form__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.form-main {
+    padding: 16px;
+}
+
+.price-form {
+    background-image: url('../svg/header/Currency.svg');
+}
+
+.form-footer {
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-image: url('../svg/header/Form-footer-icon.svg');
+}
+
+.price p {
+    margin-right: 16px;
+}
+
+.old-price {
+    font-weight: 300;
+    position: relative;
+}
+
+.old-price::before {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 80%;
+    right: -30%;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 80px;
+    z-index: 0;
+    background-image: url('../png/Rectangle 21 copy.png');
+
+}
+
+.new-price {
+    background-color: #ffc002;
+    font-weight: 900;
+}
+
+.smart-price {
+    color: black;
+    height: 24px;
+    width: 24px;
+}
+
+.price-color {
+    color: #666666;
+}
+
+.block-new-price p {
+    color: #000000;
+}
+
+.word {
+    display: block;
+    font-size: 24px;
+}
+
+.header-block-price {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.form__button {
+    background-color: #ffc002;
+    display: inline-block;
+    border-radius: 20px;
+    border: 6px solid #ffc002;
+    padding: 5px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.input-name {
+    background-image: url('../svg/header/Form-name.svg')
+}
+
+.input-phone {
+    background-image: url('../svg/header/Form-phone.svg')
+}
+
+.input-name::placeholder,
+.input-phone::placeholder {
+    padding-left: 34px;
+}
+
+.input__text {
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.ten {
+    color: #a8ca3f;
+}
+
+.form-footer {
+    text-align: right;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 16.5px;
+    color: #666666;
+    background-color: #eef2f7;
+}
+
+
+.header__form::after {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    right: -30%;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 220px;
+    width: 64px;
+    background-image: url('../svg/header/Rectangle.svg');
+}
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .header-complex {
+        max-width: 400px;
+    }
+
+    .fieldset {
+        max-width: 440px;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+    .header {
+        display: flex;
+    }
+
+    .header__list {
+        margin: 0 auto;
+    }
+
+    .complex-block {
+        align-items: flex-start;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .header {
+        margin-bottom: 50px;
+        padding: 0;
+    }
+
+    .header-gradient {
+        background-image: linear-gradient(to top left, #ffffff, #f3f9ff);
+        filter: opacity(0.8);
+    }
+
+    .header-legs {
+        display: block;
+        position: absolute;
+        left: -18%;
+        top: 0%;
+    }
+
+    .header-layer1 {
+        left: 38%;
+        top: 62%;
+    }
+
+    .header-layer2 {
+        left: -5%;
+        top: 63%;
+    }
+
+    .header-layer3 {
+        left: -15%;
+        top: 93%;
+    }
+
+    .header-layer4 {
+        left: 16%;
+        top: 85%;
+    }
+
+    .header-layer5 {
+        left: 45%;
+        top: 97%;
+    }
+
+    .header-complex {
+        margin-right: 14px;
+        margin-bottom: 0;
+    }
+
+    .header-complex {
+        width: 300px;
+    }
+
+    .header__title {
+        text-align: right;
+        margin-right: 30px;
+        position: relative;
+    }
+
+    .header__list, .photo-baner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-item {
+        display: flex;
+        flex-basis: 38%;
+        margin-bottom: 0;
+    }
+
+    .complex-block {
+        align-items: flex-start;
+        display: flex;
+    }
+
+    .photo {
+        display: block;
+        flex-basis: 46%;
+        position: relative;
+    }
+
+    .header-stap-order {
+        flex-basis: 44%;
+    }
+
+    .photo-ellipce {
+        left: -5%;
+        top: 16%;
+        position: absolute;
+        height: 570px;
+        width: 570px;
+        background-repeat: no-repeat;
+        background-position: cover;
+        background-image: url('../png/Слой\ 12.png');
+    }
+
+    .price-baner {
+        color: #fff;
+        background-image: url('../svg/header/Currency-white.svg')
+    }
+
+    .price-green {
+        background-color: #a8ca3f;
+        left: 81%;
+        top: 82%;
+    }
+
+    .price-orange {
+        background-color: #ff6b00;
+        left: 51%;
+        top: 60%;
+    }
+
+    .complex__title {
+        font-weight: 900;
+        text-align: left;
+    }
+
+    .complex__text {
+        font-weight: 500;
+        text-align: left;
+    }
+}

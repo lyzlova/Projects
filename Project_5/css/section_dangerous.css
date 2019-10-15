@@ -1,0 +1,157 @@
+.dangerous {
+    padding: 30px 20px 40px;
+    max-width: 1170px;
+}
+
+.dangerous-header {
+    display: flex;
+    margin-bottom: 56px;
+    justify-content: space-between;
+}
+
+.dangerous__title {
+    position: relative;
+}
+
+.dangerous__subtitle {
+    margin-bottom: 36px;
+    color: #2b2828;
+}
+
+.dangerous-descr {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.dangerous-descr::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background-color: #becbd8;
+    height: 3px;
+    width: 50px;
+}
+
+.dangerous__img {
+    position: relative;
+    flex-basis: 57%;
+}
+
+.dangerous__list {
+    margin-bottom: 74px;
+}
+
+.dangerous-namber {
+    background-color: #ec9a6a;
+    top: -14px;
+    left: 107px;
+    position: absolute;
+}
+
+.dangerous-ellipse {
+    padding: 18px 18px;
+    display: block;
+    font-size: 28px;
+    color: #fff;
+    line-height: 18px;
+}
+
+.dangerous-footer {
+    position: relative;
+    padding: 40px 50px;
+    border: 2px solid #f4d3bb;
+    border-radius: 10px;
+}
+
+.dangerous-footer__icon {
+    background-color: #fff;
+    height: 10px;
+    width: 170px;
+    top: 0%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.dangerous-footer__icon::before {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 50%;
+    height: 40px;
+    width: 64px;
+    border: 2px solid #fff;
+    background-image: url('../svg/main_dangerous/Forma 1.svg');
+}
+
+.dangerous-header__text {
+    flex-basis: 35%;
+    padding-top: 20px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .dangerous {
+        padding: 30px 0;
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+    .dangerous {
+        padding: 30px 20px 50px;
+    }
+
+    .dangerous__list {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1160px;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
+    .dangerous__item {
+        flex-basis: 48%;
+    }
+
+    .dangerous__item:last-child {
+        margin: 0 auto;
+    }
+
+    .complex__title{
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .dangerous {
+        padding: 160px 20px 130px;
+    }
+
+    .dangerous__subtitle {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .dangerous-descr {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .dangerous-header__text {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .dangerous-footer__text {
+        font-size: 22px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .dangerous__item {
+        flex-basis: 31.5%;
+    }
+}
